@@ -2,7 +2,7 @@
 import Script from 'next/script';
 
 export function Analytics() {
-	const token = process.env.NEXT_PUBLIC_BEAM_TOKEN;
+	const token = process.env.GOOGLE_TOKEN;
 	if (!token) {
 		return null;
 	}
@@ -10,7 +10,7 @@ export function Analytics() {
 		<>
 		<Script
 		  strategy='lazyOnload'
-		  src={`https://www.googletagmanager.com/gtag/js?id=G-G6XH8QKV7Q`}
+		  src={`https://www.googletagmanager.com/gtag/js?id=${token}`}
 		/>
   
 		<Script id='' strategy='lazyOnload'>
@@ -18,7 +18,7 @@ export function Analytics() {
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
-				gtag('config', 'G-G6XH8QKV7Q', {
+				gtag('config', '${token}', {
 				page_path: window.location.pathname,
 				});
 			`}
