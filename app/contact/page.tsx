@@ -3,13 +3,14 @@ import { Github, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { Threads } from "../components/threads";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/afonsodev_",
-		label: "Twitter",
-		handle: "@afonsodev_",
+		icon: <Threads/>,
+		href: "https://www.threads.net/@afonsodev",
+		label: "Threads",
+		handle: "@afonsodev",
 	},
 	{
 		icon: <Mail size={20} />,
