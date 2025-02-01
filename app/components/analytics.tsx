@@ -1,28 +1,26 @@
-"use client";
+import React from 'react';
 import Script from 'next/script';
 
-export function Analytics() {
-	const token = process.env.GOOGLE_TOKEN;
-	if (!token) {
-		return null;
-	}
-	return (
-		<>
-		<Script
-		  strategy='lazyOnload'
-		  src={`https://www.googletagmanager.com/gtag/js?id=${token}`}
-		/>
-  
-		<Script id='' strategy='lazyOnload'>
-		  {`
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', '${token}', {
-				page_path: window.location.pathname,
-				});
-			`}
-		</Script>
-	  </>
-	);
-}
+const GoogleAnalytics = () => {
+  return (
+    <>
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=G-4BGMY830J2`}
+      />
+
+      <Script id='' strategy='lazyOnload'>
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4BGMY830J2', {
+              page_path: window.location.pathname,
+              });
+          `}
+      </Script>
+    </>
+  );
+};
+
+export default GoogleAnalytics;

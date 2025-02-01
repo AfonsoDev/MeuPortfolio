@@ -2,28 +2,21 @@ import "../global.css";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
 import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import  Analytics  from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
     default: "afonsodev.com.br",
     template: "%s | afonsodev.com.br",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Fundador da nyxgg.app",
   openGraph: {
     title: "afonsodev.com.br",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "Fundador da nyxgg.app",
     url: "https://afonsodev.com.br",
     siteName: "afonsodev.com.br",
-    images: [
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
+    locale: "pt-BR",
     type: "website",
   },
   robots: {
@@ -36,10 +29,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
